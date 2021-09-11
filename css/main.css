@@ -1,1 +1,30 @@
-10/09/2021 16:51 Documento se encuentra sin contenido
+body{
+    background-image: url(../images/developer.webp);
+    background-repeat: no-repeat;
+    background-size: 100% 100vh;
+}
+
+.header{
+    width: 100%;
+    background-color: rgb(230, 228, 227);
+    height: 50px;
+}
+
+.header> h1{
+    padding-top: 5px;
+    width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+    color: rgb(75, 74, 74);
+}
+
+
+.content{
+    margin-top: 50px;
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    height: 100px;
+    background-color: #fff;
+    padding: 50px;
+}
