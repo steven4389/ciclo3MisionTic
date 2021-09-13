@@ -1,0 +1,12 @@
+section {
+    width: 100%;
+    border-spacing: 5px;
+}
+
+article {
+    display: table-cell;
+    padding: 12px;
+    background: #ddd;
+    width: 33.33333%;
+    border: 4px solid #f86;
+}
