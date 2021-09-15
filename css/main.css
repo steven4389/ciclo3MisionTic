@@ -1,5 +1,4 @@
 body{
-    background-image: url(../images/developer.webp);
     background-repeat: no-repeat;
     background-size: 100% 100vh;
 }
@@ -24,7 +23,30 @@ body{
     width: 50%;
     margin-left: auto;
     margin-right: auto;
-    height: 100px;
+    height: 500px;
     background-color: #fff;
     padding: 50px;
+}
+
+aside{
+    height: 100vh;
+    width: 20%;
+    background-color: rgb(164, 164, 168);
+    transform: translate(0, -600px);
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+header{
+    background-image: url(../images/nubeDistribuida.png);
+    background-repeat: no-repeat;
+    background-size: 100% 40vh;
+    height: 40vh;
+}
+
+table{
+    border: 1px solid gray;
+}
+
+thead{
+    border-bottom: 1px solid gray;
 }
