@@ -1,0 +1,106 @@
+body{
+    margin: 0;
+}
+
+.main{
+    width: 100%;
+    height: 50px;
+    background-color: rgb(114, 112, 112);
+    color: honeydew;
+}
+
+.caja1{
+    position: fixed;
+    top: 50px;
+    margin: 50px;
+    margin-left: 0px;
+    padding: 20px 5px 10px 2px;
+    border: 1px solid black;
+    background-color: #fff;
+    width: 100px;
+    height: 200px;
+    font-size: 20px;
+    text-shadow: 0px 10px 5px black;
+    box-shadow: 10px 5px 20px 5px gray;
+}
+
+.caja2{
+    cursor: pointer;
+    margin: 50px;
+    width: 200px;
+    height: 200px;
+    background-color: rgb(253, 253, 255);
+    box-shadow: 10px 5px 20px 5px gray inset;
+    transition: border-radius 1000ms;
+    animation-name:desplazamiento;
+    animation-duration: 20s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes desplazamiento{
+    0%{
+        margin-left: 0px;
+        transform: rotate(0deg);
+    }
+    50%{
+        transform: rotate(360deg);
+    }
+    75%{
+        border: green;
+    }
+}
+
+.caja2:hover{
+    background-color: green;
+    border-radius: 20px;
+    width: 500px;
+    height: 500px;
+}
+
+.caja2:visited{
+    background-color: rgb(2, 0, 128);
+}
+
+.scrollBox{
+    top: 200px;
+    left: 50px;
+    position: absolute;
+    width: 150px;
+    height: 200px;
+    overflow-y: scroll;
+    margin: 50px;
+    overflow-x: scroll;
+    z-index: -1;
+}
+
+
+.scrollBox h5:nth-child(3){
+    color: green !important;
+}
+
+
+.login{
+    margin-top: 200px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 500px;
+    height: 100px;
+    background-color: rgb(240, 236, 236);
+    border: 1px solid gray;
+    padding: 100px;
+    display: block;
+}
+
+.passwordBox{
+    margin-top: 20px;
+}
+
+label{
+    font-size: 20px;
+}
+
+.loginBody{
+    width: 200px;
+    margin-left: auto;
+    margin-right: auto;
+}
