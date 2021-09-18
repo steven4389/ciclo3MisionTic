@@ -1,0 +1,50 @@
+.mainBox{
+    width: auto;
+    height: auto;
+    border: 2px solid gray;
+    /* display: inline-flex; */
+    display: flex;
+    /* flex-direction: column;
+    flex-direction: row; 
+    flex-direction: row-reverse; */
+    /* flex-direction: column-reverse; */
+    flex-wrap:wrap;
+}
+
+.caja1{
+    flex-grow: 1;
+    order: 4;
+    padding: 20px;
+    width: 200px;
+    height: 40px;
+    margin: 10px;
+    background-color: blue;
+    color: #fff;
+}
+
+.caja2{
+    order: 3;
+    padding: 20px;
+    width: 200px;
+    height: 40px;
+    margin: 10px;
+    background-color: rgb(202, 221, 92);
+    color: #fff;
+}
+
+.caja3{
+    padding: 20px;
+    width: 200px;
+    height: 40px;
+    margin: 10px;
+    background-color: rgb(13, 92, 17);
+    color: #fff;
+}
+.caja4{
+    padding: 20px;
+    width: 200px;
+    height: 40px;
+    margin: 10px;
+    background-color: rgb(212, 88, 16);
+    color: #fff;
+}
