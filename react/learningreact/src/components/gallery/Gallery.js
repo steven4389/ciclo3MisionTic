@@ -5,6 +5,8 @@ import { products } from '../../data/products'
 const Gallery = ({ keyword }) => {
     const [productos, setProductos] = useState(products)
 
+    /*este Hook esta pendiente de 
+    cuando cambie el state keyword*/
     useEffect(() => {
         if (keyword !== "") {
             console.log('keyword', keyword);

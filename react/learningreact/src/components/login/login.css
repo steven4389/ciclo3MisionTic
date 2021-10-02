@@ -1,0 +1,15 @@
+.loginComponent{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+}
+
+
+.loginBox{
+    width: 17%;
+    height: 30vh;
+    border: 1px solid gray;
+    margin: 0px auto 0px auto;
+    padding: 20px;
+}
