@@ -1,4 +1,4 @@
-import React, {useState} from 'react'
+import React, { useState } from 'react'
 import { useHistory } from 'react-router'
 import './login.css'
 
@@ -9,13 +9,14 @@ const Login = () => {
     const [formValues, setFormValues] = useState({})
 
     const changeField = (e) => {
-        setFormValues({...formValues, 
-                      [e.target.name]: e.target.value})
+        setFormValues({
+            ...formValues,
+            [e.target.name]: e.target.value
+        })
     }
 
-    const submit =(e)=>{
+    const submit = (e) => { 
         e.preventDefault();
-        
         history.push('/home')
     }
 
