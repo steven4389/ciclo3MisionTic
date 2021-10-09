@@ -3,20 +3,36 @@ import './gallery.css'
 import { products } from '../../data/products'
 
 const Gallery = ({ keyword }) => {
-    const [productos, setProductos] = useState(products)
+    const [productos, setProductos] = useState([])
 
     /*este Hook esta pendiente de 
     cuando cambie el state keyword*/
     useEffect(() => {
         if (keyword !== "") {
             console.log('keyword', keyword);
-            let producto = products.find(product => product.nombre.match(keyword));
 
-            //if else con operador ternario
-            producto !== undefined ? setProductos([producto]) : setProductos([]);
+            fetch(`http://localhost:5000/api/getByName/${keyword}`)
+            .then(response => response.json())
+            .then(data => {
+                console.log('response', data)
+                setProductos(data);
+            }
+            ).catch((error) => {
+                console.log(error);
+            });
 
         } else {
-            setProductos(products);
+
+            fetch('http://localhost:5000/api/')
+                .then(response => response.json())
+                .then(data => {
+                    console.log('response', data)
+                    setProductos(data);
+                }
+                ).catch((error) => {
+                    console.log(error);
+                });
+
         }
     }, [keyword])
 
@@ -27,9 +43,9 @@ const Gallery = ({ keyword }) => {
             {(productos !== undefined && productos.length > 0) ?
                 productos.map(item => {
                     return (<div className="itemProduct">
-                        <div><strong>Nombre:</strong> {item.nombre}</div>
-                        <div><strong>Precio:</strong> {item.precio}</div>
-                        <div><strong>Calificación:</strong> {item.calificacion}</div>
+                        <div><strong>Nombre:</strong> {item.name}</div>
+                        <div><strong>Precio:</strong> {item.valor}</div>
+                        <div><strong>categoria:</strong> {item.category}</div>
                     </div>);
                 }) :
                 productos !== undefined ?

@@ -3,11 +3,14 @@ const sequelize = require('../db');
 
 class Product extends Model {}
 Product.init({
-    name:DataTypes.STRING,
+    name:{
+        type: DataTypes.STRING,
+        allowNull: false
+      },
     valor:DataTypes.DOUBLE,
     peso:DataTypes.FLOAT,
     stock:DataTypes.INTEGER,
-    caterory:DataTypes.STRING,
+    category:DataTypes.STRING,
     descripcion:DataTypes.TEXT
 }, {
     sequelize,
